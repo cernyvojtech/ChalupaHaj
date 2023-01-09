@@ -26,7 +26,6 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -49,6 +48,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute("default", "{controller=Cs}/{action=Index}");
 
-await app.RegisterAdmin("cernyvojtech@chalupa-haj.cz", "Lusofly_Boeing_7879");
+await app.RegisterAdmin("cernyvojtech@chalupa-haj.cz", "admin123");
 
 app.Run();
