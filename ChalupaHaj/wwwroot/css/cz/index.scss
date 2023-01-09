@@ -1,0 +1,45 @@
+﻿//--------------------------------------------------general-----------------------------------------------------------------------------------------------------
+
+
+//reset default browser settings
+@import "general/tools/_restart.scss";
+
+//import general settings
+@import "general/layout/_general.scss";
+
+//import Open Sans font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+//import variables
+@import "general/variables/_var.scss";
+
+//import mixins
+@import "general/variables/_mixin.scss";
+
+//import selected text style
+@import "general/tools/_selection.scss";
+
+
+//--------------------------------------------------Layout-------------------------------------------------------------------------------------------------------------------------------
+
+
+@import "general/layout/_footer.scss";
+@import "general/layout/_header.scss";
+
+
+//--------------------------------------------------Layout Media queries----------------------------------------------------------------------------------
+
+
+@import "general/layout/media/_footer.scss";
+@import "general/layout/media/_header.scss";
+
+
+//--------------------------------------------------Body Content-------------------------------------------------------------------------------------------------------------------------------
+
+
+@import "general/index/_index.scss";
+
+
+//--------------------------------------------------Body Media queries-----------------------------------------------------------------------
+
+@import "general/index/media/_media.scss";

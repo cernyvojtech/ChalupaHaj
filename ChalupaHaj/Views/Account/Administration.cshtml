@@ -1,0 +1,38 @@
+﻿@section css {
+    <link href="@Url.Content("~/css/cz/index.css")" rel="stylesheet">
+}
+
+@{
+    ViewData["Title"] = "Administrace";
+}
+
+<h2 class="site-heading">Administrace</h2>
+
+<div>
+    <a asp-action="ChangePassword" class="btn btn-outline-dark">
+        Změna hesla
+    </a>
+
+    <a asp-action="LogOut" class="btn btn-outline-dark">
+        Odhlásit se
+    </a>
+</div>
+
+
+@if (this.Context.User.IsInRole("Administrator"))
+{
+
+    <div>
+        <a asp-controller="News" asp-action="Index">
+            Správa novinek
+        </a>
+    </div>
+
+
+    <div>
+        <a asp-controller="PriceList" asp-action="Index">
+            Správa ceníku
+        </a>
+    </div>
+    
+}

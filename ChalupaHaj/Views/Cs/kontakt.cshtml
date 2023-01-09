@@ -1,0 +1,39 @@
+﻿@section css {
+    <link href="@Url.Content("~/css/cz/kontakt.css")" rel="stylesheet" />
+}
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Chalupa Háj | Kontakt";
+
+}
+
+
+<div class="greyBox">
+    <h2>Kontakt</h2>
+</div>
+
+<div class="greenBox">
+
+
+    <div>
+        <h3>Chalupa Háj ***</h3>
+        <address>Háj 17, 356 01 Jindřichovice</address><address>Česká republika</address>
+    </div>
+    <hr>
+
+
+    <div>
+        <h3>Kontakt</h3>
+        <a href="mailto: info@chalupa-haj.cz">info@chalupa-haj.cz</a><br />
+        <a href="tel: +420721046446">+420 721 046 446</a><br />
+        <a href="tel: +420728979036">+420 728 979 036</a><br />
+    </div>
+</div>
+
+<!--Render view component with contact us form-->
+@await Component.InvokeAsync("ContactUsForm")
+
+    
+<div id="map"></div>

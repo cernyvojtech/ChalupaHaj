@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Chalupa Haj">
+    <meta name="application-name" content="Chalupa Haj">
+    <meta name="description" content="Přijměte prosím naše pozvání do příjemných a útulných prostor naší chalupy. Ať k nám zavítáte na jednu či více nocí, věříme, že se u nás budete cítit jako doma. Nabízíme Vám pohodlně vybavené pokoje, společenskou místnost s kulečníkem, krbem, barem a výčepním zařízením a s dětským koutkem.">
+    @RenderSection("css", false)
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../icon/favicon-16x16.png">
+    <link rel="manifest" href="../../icon/site.webmanifest">
+    <link rel="mask-icon" href="../../icon/safari-pinned-tab.svg" color="#39843b">
+    <script src="js/modernizr/modernizr.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script src="/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/97f8fd629e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <!--Header-->
+    
+    
+    <header>
+
+        <!--upper side of header-->
+       
+        
+        <div class="innerHeaderTop">
+            <div class="innerHeaderBottomContainer">
+
+
+                <div class="innerHeaderTopTxt">
+                    <a href="tel:+420721046446"><img src="~/images/phone.png" alt="telefon">+420 721 046 446</a>
+                    <a href="mailto:info@chalupa-haj.cz"><img src="~/images/mail.png" alt="email">info@chalupa-haj.cz</a>
+
+                    @if (this.Context.User.IsInRole("Administrator"))
+                    {
+                    <a asp-controller="Account" asp-action="Administration" style="margin-left: 2rem">Administrace</a>
+                    <a asp-controller="Account" asp-action="LogOut" style="margin-left: 2rem">Odhlásit se</a>
+                    }
+
+                </div>
+
+                
+
+
+                <div class="lang-img-container">
+                    <a asp-controller="cs" asp-action="Index"><img class="lang-img" src="~/images/cz.png" alt="cz"></a>
+                    <a asp-controller="En" asp-action="Index"><img class="lang-img" src="~/images/en.png" alt="en"></a>
+                    <a asp-controller="Home" asp-action="Index"><img class="lang-img" src="~/images/de.png" alt="de"></a>              
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!--lower side of header-->
+        
+        
+        <div class="innerHeaderBottom">
+            <div class="innerHeaderBottomContainer">
+               
+                
+                <!--web title-->
+                <div class="greyBox">
+                    <h1>Chalupa Háj</h1>
+                </div>
+
+
+                <!--menu button-->
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <spann class="menu-btn">
+                        <spann class="menu-btn__burger"></spann>
+                    </spann>
+                </label>
+
+
+                <!--navigation menu-->
+                <nav>
+                    <ul>
+                        <li>
+                            <a asp-controller="cs" asp-action="Index"><img src="~/images/cz.png" alt="cz"></a>
+                            <a asp-controller="cs" asp-action="Index"><img src="~/images/en.png" alt="en"></a>
+                            <img src="~/images/de.png" alt="de">
+                        </li>
+                        <li><a asp-controller="cs" asp-action="Index">Chalupa</a></li>
+                        @*WORK IN PROGRESS<li><a asp-controller="cs" asp-action="jizBrzy">Okolí</a></li>*@
+                        <li><a asp-controller="cs" asp-action="galerie">Galerie</a></li>
+                        <li><a asp-controller="cs" asp-action="cenik">Ceník</a></li>
+                        <li><a asp-controller="cs" asp-action="kontakt">Kontakt</a></li>
+                        <li><a asp-controller="cs" asp-action="rezervace">Rezeravace</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </div>
+
+    </header>
+
+
+    <!--Page content-->
+    
+    
+    <div class="content">
+        @RenderBody()
+    </div>
+
+
+    <!--Footer-->
+    
+    
+    <footer>
+
+        <div class="footer-container">
+
+
+            <article>
+                <h3>Chalupa Háj <span>***</span></h3>
+                <address>Háj 17, 356 01 Jindřichovice<br>Česká republika</address>
+            </article>
+
+
+            <article>
+                <h3>Kontakt</h3>
+                <a href="mailto:info@chalupa-haj.cz">info@chalupa-haj.cz</a>
+                <a href="tel:+420721046446">+420 721 046 446</a>
+                <a href="tel:+420728979036">+420 728 979 036</a>
+            </article>
+
+
+            <article>
+                <h3>Sociální sítě</h3>
+                <div class="social-container">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/ChalupaHaj">
+                                <i class="fab fa-facebook-f icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+
+
+        <div class="copy">
+            <p>&copy; @DateTime.Now.Year Chalupa Háj</p>
+        </div>
+
+
+    </footer>
+
+    <!--scripts-->
+
+    <script src="~/js/button_animation.js"></script>
+    <script src="~/js/maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7sui47va04WfTRA5ddW9K35ttoBUn-nY&callback=initMap"></script>
+    <script src="~/js/galery.js"></script>
+    <script src="~/js/maps_edit.js"></script>
+    <script src="https://obsazenost.e-chalupy.cz/resize.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+    <script src="~/js/SlideShow.js"></script>
+    @RenderSection("scripts",false)
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,49 @@
+﻿@media (min-width: 1200px) {
+    .content {
+        margin: 6rem auto 0 auto;
+        padding: 0;
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+
+        .contact {
+            max-width: 1200px;
+            margin: 0 auto 8rem auto;
+
+            .greyBox {
+                width: 30%;
+                transition: .5s;
+                cursor: pointer;
+
+                &:hover {
+                    background: $grey-box-hover-color;
+                    transition: .5s;
+                }
+            }
+        }
+
+        .contact-form {
+            margin: 6rem auto;
+            padding: 5rem 3rem;
+            border-radius: 110px;
+            transition: .5s;
+
+            .btn:hover {
+                background: $grey-box-hover-color;
+                transition: .5s;
+            }
+        }
+
+
+        #map {
+            border-radius: 150px;
+            height: 40rem;
+            margin-bottom: 6rem;
+        }
+    }
+}

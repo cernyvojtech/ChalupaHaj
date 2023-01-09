@@ -1,0 +1,41 @@
+﻿.content {
+
+    .main {
+        width: 100%;
+        font-family: $font;
+
+        .greyBox {
+            @include createGreyBox();
+            transition: all .5s;
+
+            &:hover {
+                background-color: $grey-box-hover-color;
+            }
+
+            a{
+                font-size: 2.2rem;
+            }
+        }
+
+        .greenBox {
+            @include createGreenBox();
+            margin: $element-spacing*2 auto;
+            padding: 2rem 1rem;
+            width: 80%;
+            max-width: 40rem;
+            
+            p{
+                text-align: center;
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+            
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .content{
+        padding-top: 6rem;
+    }
+}

@@ -1,0 +1,36 @@
+﻿.content {
+    margin: 13rem auto;
+    padding: 0;
+
+    .greyBox {
+        @include createGreyBox();
+    }
+
+    .greenBox {
+        @include createGreenBox();
+        width: 70%;
+        margin: 5rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            text-align: center;
+            margin: 1rem auto;
+            line-height: 2rem;
+        }
+
+        span {
+            display: block;
+        }
+
+        hr {
+            width: 2rem;
+            border: .2px solid white;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+}

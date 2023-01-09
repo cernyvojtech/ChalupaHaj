@@ -1,0 +1,87 @@
+﻿//creates hover effect in nav menu
+@mixin createNavButton() {
+    @media (max-width: 1200px) {
+        padding: .7rem .7rem;
+        border-radius: 15px;
+        background: $color-green;
+        transition: .5s;
+    }
+}
+
+//tool to center item in div vertical and horizontal
+@mixin headerDoFlex($space) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $space;
+}
+
+//creeates grey box witht title in web main section
+@mixin createGreyBox {
+    width: $greyBox-width;
+    max-width: 30rem;
+    height: $greyBox-height;
+    margin: 0 auto;
+    padding: 0;
+    background: $color-grey;
+    border-radius: $greyBox-border-radius;
+    text-align: center;
+    position: relative;
+
+    h2,
+    a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: $greyBox-height;
+        color: $color-font;
+        font-family: $font;
+        font-size: $greyBox-font-size;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+
+//cretes green box with paragraph in web main section
+@mixin createGreenBox {
+    width: $greenBox-width;
+    margin: 0 auto;
+    padding: 2.5rem 2.5rem;
+    background: $color-green;
+    border-radius: $greenBox-border-radius;
+    text-align: center;
+
+    p {
+        color: $color-font;
+        font-family: $font;
+        font-size: $main-paragraph-size;
+        font-weight: normal;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+//creates box containing news in section news
+@mixin createNewsBox() {
+    width: 80%;
+    margin: $element-spacing auto;
+    padding: 1.8rem 0;
+    border-radius: $news-box-radius;
+    background: $color-green;
+    color: $color-font;
+    text-align: center;
+
+    h3 {
+        text-transform: uppercase;
+        padding-top: 2rem;
+        font-size: $news-title-font-size;
+        font-weight: $news-title-weight;
+    }
+
+    p {
+        font-size: $news-paragraph-font-size;
+        font-weight: $news-paragraph-weight;
+    }
+}

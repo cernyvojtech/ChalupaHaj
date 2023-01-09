@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ChalupaHaj.Models.News>
+
+
+<!--If there is any news article -> creates news content-->
+@if (Model != null)
+{
+
+    <!--News Content-->
+    <section class="news">
+
+
+        <!--News header-->
+        <div class="greyBox">
+            <a>Novinky</a>
+        </div>
+
+
+        <!--Contains news articles-->
+        <div class="news-container">
+
+
+            <!--for each article in news model creates div(box)-->
+            @foreach (var item in Model)
+            {
+                <div class="box">
+
+                    <h3>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </h3>
+
+                    <hr>
+
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </p>
+
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Price),- / noc
+                    </p>
+
+                </div>
+            }
+
+
+        </div>
+
+
+    </section>
+}

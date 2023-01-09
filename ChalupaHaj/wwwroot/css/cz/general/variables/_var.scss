@@ -1,0 +1,88 @@
+﻿//general - colors
+$color-grey: rgb(69, 69, 69);
+$color-green: rgb(59, 188, 38);
+$color-dark-green: rgb(32, 104, 21);
+$color-font: rgb(255, 255, 255);
+$color-font-hover: rgb(87, 87, 87);
+$color-font-hover-top-header: rgb(172, 172, 172);
+$color-green-menu: rgb(52, 168, 34);
+
+//general - font
+$font: 'Open Sans', sans-serif, serif;
+
+//Top part of header
+$header-top-font-size: 1rem;
+
+//inner-header-bottom
+$inner-header-title-size: 2.3rem;
+$inner-header-border: .5px solid $color-grey;
+
+//navigation bar
+$nav-font-size: 1.5rem;
+
+//main content ==============================================//
+
+
+//grey box
+$greyBox-width: 80%;
+$greyBox-height: 5rem;
+$grey-box-hover-color: rgb(141, 141, 141);
+$greyBox-border-radius: 30px;
+$greyBox-font-size: 1.5rem;
+
+
+//green box
+$greenBox-width: 80%;
+$greenBox-border-radius: 70px;
+
+//main section
+$element-spacing: 3rem;
+
+//main - img
+$img-border-radius: 40px;
+$img-width: 80%;
+
+//main - paragraph
+$main-paragraph-size: 1.2rem;
+
+//news
+$news-box-radius: 70px;
+$news-box-text-spacing: 1.5rem;
+
+//news font size
+$news-title-font-size: 1.5rem;
+$news-paragraph-font-size: 1.2rem;
+
+//news font weight
+$news-title-weight: 600;
+$news-paragraph-weight: 500;
+
+//galery
+$galery-img-width: 80%;
+$img-border-radius: 50px;
+
+//contact
+$form-width: 90%;
+$form-font-size: 1rem;
+
+//form - radius
+$form-b-radius: 50px;
+$form-button-radius: 20px;
+$form-input-b-radius: 20px;
+
+//form- colors
+$form-background: $color-green;
+$form-background-text-area: white;
+$form-label-color: black;
+
+//footer
+$footer-title-size: 2rem;
+$footer-title-weight: 700;
+$footer-title-paragraph-space: 2rem;
+$footer-paragraph-size: 1.3rem;
+$footer-line-height: 2.5rem;
+$footer-first-spacing: 5rem;
+$footer-spacing: 2rem;
+
+//social media icons
+$icon-width: 2rem;

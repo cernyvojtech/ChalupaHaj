@@ -1,0 +1,73 @@
+﻿@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .content {
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .content {
+        margin: 6rem auto 0 auto;
+        padding: 0;
+
+        .cenik-container {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .content {
+        margin: 6rem auto 0 auto;
+        padding: 0;
+
+        .cenik-container {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        margin: 6rem auto 0 auto;
+        padding: 0;
+
+        .cenik-container {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+﻿.content {
+    padding-top: 6rem;
+
+    .greyBox {
+        @include createGreyBox();
+    }
+
+    .row {
+        width: 60rem;
+        margin: 3rem auto;
+        max-width: 600px;
+        background: $form-background;
+        padding: 3rem 2rem;
+        border-radius: 70px;
+        text-align: center;
+
+        .field-validation-error {
+            color: #e80c4d;
+            font-weight: bold;
+        }
+
+        .field-validation-valid {
+            display: none;
+        }
+
+        input.input-validation-error {
+            border: 1px solid #e80c4d;
+        }
+
+        .validation-summary-errors {
+            color: #e80c4d;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .validation-summary-valid {
+            display: none;
+        }
+
+        .col-md-4 {
+            width: 90%;
+            margin: 0 auto;
+
+            .form-group {
+                background: white;
+                margin: 2rem 0;
+                padding: 0.8rem 1rem;
+                border-radius: 20px;
+
+                label {
+                    display: block;
+                    padding: 1rem 0;
+                    text-align: left;
+                    color: #333;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    font-family: $font;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 1rem 0;
+                    border-radius: 10px;
+                    border: 1px solid grey;
+                    font-size: 20px;
+                    font-family: $font;
+                    text-align: center;
+                }
+
+                span {
+                    display: block;
+                    background-color: blue;
+                }
+            }
+
+            .text-danger {
+                display: block;
+                background: blue;
+            }
+        }
+    }
+}
