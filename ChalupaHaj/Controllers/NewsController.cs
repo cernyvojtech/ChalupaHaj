@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ChalupaHaj.Controllers
 {
-    //controller for admnistator - edits news articles
+    //Controller for administration purpose - edits articles with news
     [Authorize]
     public class NewsController : Controller
     {
@@ -35,7 +35,7 @@ namespace ChalupaHaj.Controllers
         }
 
 
-        //returns page which shows details of news article
+        //returns page showing details of news article
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.News == null)

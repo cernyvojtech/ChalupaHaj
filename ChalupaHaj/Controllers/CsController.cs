@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ChalupaHaj.Controllers
 {
-    //main controller for cs language
+    //Main controller - returns views with czech language
     public class CsController : Controller
     {
         //creates database context
@@ -26,13 +26,6 @@ namespace ChalupaHaj.Controllers
         }
        
 
-        //returns page with points of interest
-        public IActionResult Okoli()
-        {
-            return View();
-        }
-
-
         //returns page with galery
         public IActionResult Galerie()
         {
@@ -40,7 +33,7 @@ namespace ChalupaHaj.Controllers
         }
 
 
-        //returns page with pricelist
+        //returns page with price list
         public IActionResult Cenik()
         {
             return View();
@@ -55,7 +48,7 @@ namespace ChalupaHaj.Controllers
 
 
         //CONTACT US FORM
-        //on post saves contact us form to the database and sends it to email
+        //on post saves contact us form to the database and sends it via email
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Surname,Email,Phone,Message")] Form contactUsForm)

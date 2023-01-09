@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ChalupaHaj.Controllers
 {
-    //controller manages accounts
+    //AccountController manages users accounts
     [Authorize]
     public class AccountController : Controller
     {
@@ -30,7 +30,7 @@ namespace ChalupaHaj.Controllers
         }
 
 
-        //validates, collects data from registration form and creates user
+        //validates and collects data from registration form -> creates new user
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -40,12 +40,14 @@ namespace ChalupaHaj.Controllers
 
             if (ModelState.IsValid)
             {
+                //if user is not found, it creates new one
                 if (await userManager.FindByEmailAsync(model.Email) is null)
                 {
                     //creates new user
                     var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                     var result = await userManager.CreateAsync(user, model.Password);
 
+                    //attempt to sign in
                     if (result.Succeeded)
                     { 
                         await signInManager.SignInAsync(user, isPersistent: false);
@@ -58,13 +60,12 @@ namespace ChalupaHaj.Controllers
                     AddErrors(result);
                 }
 
+                //error in case account already exists
                 AddErrors(IdentityResult.Failed(new IdentityError() { Description = $"Email {model.Email} je již zaregistrován" }));
             }
 
             return View(model);
         }
-
-
 
 
         //displays log-in form
@@ -77,7 +78,7 @@ namespace ChalupaHaj.Controllers
         }
 
 
-        //validates data and logs user
+        //validates data -> signs in user
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -109,16 +110,12 @@ namespace ChalupaHaj.Controllers
         }
 
 
-
-
         //Logs out user
         public async Task<IActionResult> LogOut()
         {
             await signInManager.SignOutAsync();
             return RedirectToAction("Index", "Cs");
         }
-
-
 
 
         //displays form for password change
