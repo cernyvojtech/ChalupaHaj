@@ -1,0 +1,10 @@
+﻿//Correction for firefox browser
+::-moz-selection {
+    color: $color-font;
+    background: $color-green;
+}
+
+::selection {
+    color: $color-font;
+    background: $color-green;
+}

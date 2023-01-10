@@ -1,0 +1,24 @@
+﻿// Abstract files
+@import "abstracts/_mixins.scss";
+@import "abstracts/_variables.scss";
+
+// Core files
+@import "core/_buttons.scss";
+
+// Components
+@import "components/_reset.scss";
+@import "components/_selection.scss";
+
+// Layout
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+
+// Sections
+/*@import "sections";*/
+
+// Pages
+@import "pages/_chalupa.scss";
+@import "pages/_galerie.scss";
+@import "pages/_cenik.scss";
+@import "pages/_kontakt.scss";
+@import "pages/_rezervace.scss";

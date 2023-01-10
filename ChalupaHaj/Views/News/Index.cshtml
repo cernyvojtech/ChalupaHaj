@@ -1,55 +1,58 @@
 ﻿@model IEnumerable<ChalupaHaj.Models.News>
 
-@section css {
-    <link href="@Url.Content("~/css/cz/news_index.css")" rel="stylesheet" />
-}
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 @if (this.Context.User.IsInRole("Administrator"))
 {
-    <div class="greyBox">
-        <h2>NOVINKY</h2>
-    </div>
+    <div class="content-news-index">
 
-    <section class="news-container">
-
-        <div class="box">
-            <a asp-action="Create">Vytvořit novinku</a>
+        <div class="greyBox">
+            <h2>NOVINKY</h2>
         </div>
 
-        <table>
-            @foreach (var item in Model)
-            {
+        <section class="news-container">
 
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
+            <div class="box">
+                <a asp-action="Create">Vytvořit novinku</a>
+            </div>
 
+            <table>
+                @foreach (var item in Model)
+                {
 
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                    </td>
-
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Price)
-                    </td>
-
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Upravit |</a>
-                        <a asp-action="Details" asp-route-id="@item.Id">Podrobnosti |</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id">Smazat</a>
-                    </td>
-
-                </tr>
-            }
-        </table>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
 
 
-    </section>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Upravit |</a>
+                            <a asp-action="Details" asp-route-id="@item.Id">Podrobnosti |</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id">Smazat</a>
+                        </td>
+
+                    </tr>
+                }
+            </table>
+
+
+        </section>
+
+    </div>
+    
 }
 

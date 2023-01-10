@@ -1,94 +1,89 @@
 ﻿@using ChalupaHaj.Models
 @inject LanguageService language
 
-@section css {
-    <link href="@Url.Content("~/css/cz/index.css")" rel="stylesheet">
-}
-
-@{
-    
+@{  
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = @language.GetKey("title");
-    
+    ViewBag.Title = @language.GetKey("title");  
 }
-
 
 
 <!--Content-->
+<div class=content-chalupa>
+
+    <!--Main content-->
+    <div class="main">
 
 
-<!--Main content-->
-<div class="main">
+        <!--Button reservation-->
+        <div class="greyBox">
+            <a asp-controller="Home" asp-action="rezervace">@language.GetKey("nav-Rezervace")</a>
+        </div>
 
 
-    <!--Button reservation-->
-    <div class="greyBox">
-        <a asp-controller="Home" asp-action="rezervace">@language.GetKey("nav-Rezervace")</a>
+        <!--Main image-->
+        <img src="~/images/chalupa1.jpg" alt="Chalupa Háj">
+
+
+        <!--Main article-->
+        <div class="greenBox">
+            <p>@language.GetKey("index-Uvitani")</p>
+        </div>
+
+
     </div>
 
 
-    <!--Main image-->
-    <img src="~/images/chalupa1.jpg" alt="Chalupa Háj">
+    <!--Renders view component - news content-->
+    @await Component.InvokeAsync("News")
 
 
-    <!--Main article-->
-    <div class="greenBox">
-        <p>@language.GetKey("index-Uvitani")</p>
+    <!--Galery Content-->
+    <div class="galery">
+
+
+        <!--Galery header-->
+        <div class="greyBox">
+            <a asp-controller="Home" asp-action="galerie">@language.GetKey("nav-Galerie")</a>
+        </div>
+
+
+        <!--Galery container-->
+        <div class="galery-container">
+
+            <!--exterior-->
+            <img src="~/images/exterier/11.jpg" alt="Chalupa Háj">
+
+            <!--interior-->
+            <img src="~/images/interier/09.jpeg" alt="Chalupa Háj">
+
+            <!--surroundings-->
+            <img src="~/images/chalupa3.jpg" alt="Chalupa Háj">
+
+        </div>
+
     </div>
 
 
+    <!--Contact content-->
+    <div class="contact">
+
+
+        <!--Contact header-->
+        <div class="greyBox">
+            <a asp-controller="Home" asp-action="kontakt">@language.GetKey("nav-Kontakt")</a>
+        </div>
+
+
+        <!--Render view component with contact us form-->
+        @await Component.InvokeAsync("ContactUsForm")
+
+
+        <!--map with location from google maps-->
+        <div id="map"></div>
+
+    </div>
 </div>
 
 
-<!--Renders view component - news content-->
 
-
-@await Component.InvokeAsync("News")
-
-
-<!--Galery Content-->
-<div class="galery">
-
-
-    <!--Galery header-->
-    <div class="greyBox">
-        <a asp-controller="Home" asp-action="galerie">@language.GetKey("nav-Galerie")</a>
-    </div>
-
-
-    <!--Galery container-->
-    <div class="galery-container">
-
-        <!--exterior-->
-        <img src="~/images/exterier/11.jpg" alt="Chalupa Háj">
-
-        <!--interior-->
-        <img src="~/images/interier/09.jpeg" alt="Chalupa Háj">
-
-        <!--surroundings-->
-        <img src="~/images/chalupa3.jpg" alt="Chalupa Háj">
-
-    </div>
-
-</div>
-
-
-<!--Contact content-->
-<div class="contact">
-
-
-    <!--Contact header-->
-    <div class="greyBox">
-        <a asp-controller="Home" asp-action="kontakt">@language.GetKey("nav-Kontakt")</a>
-    </div>
-
-
-    <!--Render view component with contact us form-->
-    @await Component.InvokeAsync("ContactUsForm")
-
-
-    <!--map with location from google maps-->
-    <div id="map"></div>
-
-</div>
 

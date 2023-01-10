@@ -1,0 +1,111 @@
+﻿.content-cenik {
+    margin: 13rem auto;
+    padding: 0;
+
+    .greyBox {
+        @include createGreyBox();
+    }
+
+    .greenBox {
+        @include createGreenBox();
+        width: 70%;
+        margin: 5rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            text-align: center;
+            margin: 1rem auto;
+            line-height: 2rem;
+        }
+
+        span {
+            display: block;
+        }
+
+        hr {
+            width: 2rem;
+            border: .2px solid white;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .content-cenik {
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .content-cenik {
+        margin: 6rem auto 0 auto;
+        padding: 0;
+
+        .cenik-container {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .content-cenik {
+        margin: 6rem auto 0 auto;
+        padding: 0;
+
+        .cenik-container {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-cenik {
+        margin: 6rem auto 0 auto;
+        padding: 0;
+
+        .cenik-container {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .greyBox {
+            width: 30rem;
+        }
+
+        .greenBox {
+            width: 25rem;
+        }
+    }
+}

@@ -1,25 +1,27 @@
 ﻿@using ChalupaHaj.Models
 @inject LanguageService language
 
-
-@section css {
-    <link href="@Url.Content("~/css/cz/rezervace.css")" rel="stylesheet" />
-}
-
-    @{
-
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = @language.GetKey("title-rezervace");
-
 }
 
-<div class="greyBox">
-    <h2>@language.GetKey("nav-Rezervace")</h2>
+<div class="content-reservation">
+
+
+    <div class="greyBox">
+        <h2>@language.GetKey("nav-Rezervace")</h2>
+    </div>
+
+
+    @await Component.InvokeAsync("Reservation")
+
+
+    <div class="obsazenost">
+        <iframe src="https://obsazenost.e-chalupy.cz/kalendar.php?id=1026&pocetMesicu=12&velikost=3&legenda=ne&vybraneMesice=&naStred=ano&ctvrtleti=ne&stin=ne&jazyk=cz&jednotky=ano&idJednotky=0&vypisJednotky=ne&souhrnny=&pozadi=ffffff&kalendarText=000000&kalendarPozadi=ffffff&ramecek=dddddd&mesicText=555555&mesicPozadi=dddddd&dnyText=008000&dnyPozadia=ffffff&obsazenoText=222222&obsazenoPozadi=f74848&volnoText=222222&volnoPozadi=67cf67&castecneText=222222&castecnePozadi=489ce0&neaktivniDnyText=bbbbbb&neaktivniDnyPozadi=ffffff&legendaText=000000&fontFamily=Open%20Sans&extCss=" height="460px" width="100%" frameborder="0" id="echalupy-kalendar"></iframe>
+    </div>
+
+
 </div>
 
-@await Component.InvokeAsync("Reservation")
-
-<div class="obsazenost">
-    <iframe src="https://obsazenost.e-chalupy.cz/kalendar.php?id=1026&pocetMesicu=12&velikost=3&legenda=ne&vybraneMesice=&naStred=ano&ctvrtleti=ne&stin=ne&jazyk=cz&jednotky=ano&idJednotky=0&vypisJednotky=ne&souhrnny=&pozadi=ffffff&kalendarText=000000&kalendarPozadi=ffffff&ramecek=dddddd&mesicText=555555&mesicPozadi=dddddd&dnyText=008000&dnyPozadia=ffffff&obsazenoText=222222&obsazenoPozadi=f74848&volnoText=222222&volnoPozadi=67cf67&castecneText=222222&castecnePozadi=489ce0&neaktivniDnyText=bbbbbb&neaktivniDnyPozadi=ffffff&legendaText=000000&fontFamily=Open%20Sans&extCss=" height="460px" width="100%" frameborder="0" id="echalupy-kalendar"></iframe>
-</div>
 

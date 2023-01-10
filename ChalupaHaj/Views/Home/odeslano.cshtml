@@ -1,16 +1,14 @@
 ﻿@using ChalupaHaj.Models
 @inject LanguageService language
 
-@section css {
-    <link href="@Url.Content("~/css/cz/odeslano.css")" rel="stylesheet" />
-}
 
 @{
     ViewData["Title"] = @language.GetKey("form-zprava-odeslana");
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<section class="main">
+
+<section class="content-msg-sent">
 
 
     <div class="greyBox">

@@ -15,7 +15,8 @@
     <meta name="apple-mobile-web-app-title" content="Chalupa Haj">
     <meta name="application-name" content="Chalupa Haj">
     <meta name="description" content="Přijměte prosím naše pozvání do příjemných a útulných prostor naší chalupy. Ať k nám zavítáte na jednu či více nocí, věříme, že se u nás budete cítit jako doma. Nabízíme Vám pohodlně vybavené pokoje, společenskou místnost s kulečníkem, krbem, barem a výčepním zařízením a s dětským koutkem.">
-    @RenderSection("css", false)
+    @*@RenderSection("css", false)*@
+    <link rel="stylesheet" href="~/css/sass/app.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../../icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../icon/favicon-32x32.png">
@@ -126,9 +127,7 @@
     <!--Page content-->
     
     
-    <div class="content">
-        @RenderBody()
-    </div>
+    @RenderBody()
 
 
     <!--Footer-->

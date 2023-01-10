@@ -1,22 +1,19 @@
 ﻿@using ChalupaHaj.Models
 @inject LanguageService language
 
-
-@section css {
-    <link href="@Url.Content("~/css/cz/cenik.css")" rel="stylesheet"/>
-}
-
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = @language.GetKey("title-cenik");
 }
 
-<article class="cenik-container">
+<article class="content-cenik">
+
 
     <div class="cenik1">
         <div class="greyBox">
             <h2>@language.GetKey("cenik-Uvod")</h2>
         </div>
+
 
         <div class="greenBox">
 
@@ -42,6 +39,7 @@
 
         </div>
     </div>
+
 
     <div class="cenik2">
         <div class="greyBox">
@@ -93,6 +91,7 @@
         </div>
     </div>
 
+
     <div class="cenik3">
         <div class="greyBox">
             <h2>@language.GetKey("cenik-storno")</h2>
@@ -118,5 +117,6 @@
 
         </div>
     </div>
+
 
 </article>
