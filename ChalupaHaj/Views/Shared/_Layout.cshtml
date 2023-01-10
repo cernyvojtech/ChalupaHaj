@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using ChalupaHaj.Models
+@inject LanguageService language
+
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
@@ -65,9 +68,9 @@
 
 
                 <div class="lang-img-container">
-                    <a asp-controller="cs" asp-action="Index"><img class="lang-img" src="~/images/cz.png" alt="cz"></a>
-                    <a asp-controller="En" asp-action="Index"><img class="lang-img" src="~/images/en.png" alt="en"></a>
-                    <a asp-controller="Home" asp-action="Index"><img class="lang-img" src="~/images/de.png" alt="de"></a>              
+                    <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="cs-CZ"><img class="lang-img" src="~/images/cz.png" alt="cz"></a>
+                    <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US"><img class="lang-img" src="~/images/en.png" alt="en"></a>
+                    <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="de-DE"><img class="lang-img" src="~/images/de.png" alt="de"></a>
                 </div>
 
 
@@ -84,7 +87,7 @@
                 
                 <!--web title-->
                 <div class="greyBox">
-                    <h1>Chalupa Háj</h1>
+                    <h1>@language.GetKey("nav-ChalupaHaj")</h1>
                 </div>
 
 
@@ -101,16 +104,15 @@
                 <nav>
                     <ul>
                         <li>
-                            <a asp-controller="cs" asp-action="Index"><img src="~/images/cz.png" alt="cz"></a>
-                            <a asp-controller="cs" asp-action="Index"><img src="~/images/en.png" alt="en"></a>
+                            <a asp-controller="Home" asp-action="Index"><img src="~/images/cz.png" alt="cz"></a>
+                            <a asp-controller="Home" asp-action="Index"><img src="~/images/en.png" alt="en"></a>
                             <img src="~/images/de.png" alt="de">
                         </li>
-                        <li><a asp-controller="cs" asp-action="Index">Chalupa</a></li>
-                        @*WORK IN PROGRESS<li><a asp-controller="cs" asp-action="jizBrzy">Okolí</a></li>*@
-                        <li><a asp-controller="cs" asp-action="galerie">Galerie</a></li>
-                        <li><a asp-controller="cs" asp-action="cenik">Ceník</a></li>
-                        <li><a asp-controller="cs" asp-action="kontakt">Kontakt</a></li>
-                        <li><a asp-controller="cs" asp-action="rezervace">Rezeravace</a></li>
+                        <li><a asp-controller="Home" asp-action="Index">@language.GetKey("nav-Chalupa")</a></li>
+                        <li><a asp-controller="Home" asp-action="galerie">@language.GetKey("nav-Galerie")</a></li>
+                        <li><a asp-controller="Home" asp-action="cenik">@language.GetKey("nav-Cenik")</a></li>
+                        <li><a asp-controller="Home" asp-action="kontakt">@language.GetKey("nav-Kontakt")</a></li>
+                        <li><a asp-controller="Home" asp-action="rezervace">@language.GetKey("nav-Rezervace")</a></li>
                     </ul>
                 </nav>
 
@@ -138,13 +140,13 @@
 
 
             <article>
-                <h3>Chalupa Háj <span>***</span></h3>
-                <address>Háj 17, 356 01 Jindřichovice<br>Česká republika</address>
+                <h3>@language.GetKey("footer-Chalupa") <span>***</span></h3>
+                <address>@language.GetKey("footer-Address")<br>@language.GetKey("footer-Country")</address>
             </article>
 
 
             <article>
-                <h3>Kontakt</h3>
+                <h3>@language.GetKey("nav-Kontakt")</h3>
                 <a href="mailto:info@chalupa-haj.cz">info@chalupa-haj.cz</a>
                 <a href="tel:+420721046446">+420 721 046 446</a>
                 <a href="tel:+420728979036">+420 728 979 036</a>
@@ -152,7 +154,7 @@
 
 
             <article>
-                <h3>Sociální sítě</h3>
+                <h3>@language.GetKey("footer-Socials")</h3>
                 <div class="social-container">
                     <ul>
                         <li>
@@ -168,7 +170,7 @@
 
 
         <div class="copy">
-            <p>&copy; @DateTime.Now.Year Chalupa Háj</p>
+            <p>&copy; @DateTime.Now.Year @language.GetKey("footer-Chalupa")</p>
         </div>
 
 

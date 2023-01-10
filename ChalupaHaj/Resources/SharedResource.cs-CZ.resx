@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cenik" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cenik-domaci" xml:space="preserve">
+    <value>Domácí mazlíček</value>
+  </data>
+  <data name="cenik-domaci-cena" xml:space="preserve">
+    <value>500,- Kč za celý pobyt</value>
+  </data>
+  <data name="cenik-kauce" xml:space="preserve">
+    <value>Při předání je třeba uhradit vratnou kauci ve výši 3.000,- Kč</value>
+  </data>
+  <data name="cenik-Leto" xml:space="preserve">
+    <value>Letní sezóna</value>
+  </data>
+  <data name="cenik-Mimo" xml:space="preserve">
+    <value>Mimo sezónu</value>
+  </data>
+  <data name="cenik-pa-ne-svatky" xml:space="preserve">
+    <value>pátek - neděle + svátky</value>
+  </data>
+  <data name="cenik-po-pobytu" xml:space="preserve">
+    <value>Po pobytu je vyúčtována skutečná spotřeba dřeva a závěrečný úklid, popř. další objednané služby</value>
+  </data>
+  <data name="cenik-poplatky" xml:space="preserve">
+    <value>DALŠÍ POPLATKY</value>
+  </data>
+  <data name="cenik-pristylka" xml:space="preserve">
+    <value>přistýlka</value>
+  </data>
+  <data name="cenik-pristylka-cena" xml:space="preserve">
+    <value>250,- Kč za přistýlku / pobyt</value>
+  </data>
+  <data name="cenik-pristylka-osoby" xml:space="preserve">
+    <value>11 až 12 osob</value>
+  </data>
+  <data name="cenik-silvestr" xml:space="preserve">
+    <value>Silvestr</value>
+  </data>
+  <data name="cenik-silvestr-minimum" xml:space="preserve">
+    <value>min. 7 nocí</value>
+  </data>
+  <data name="cenik-spotreba" xml:space="preserve">
+    <value>Případná spotřeba dřev. briket 55,- Kč / 10 kg balík</value>
+  </data>
+  <data name="cenik-storno" xml:space="preserve">
+    <value>Storno podmínky</value>
+  </data>
+  <data name="cenik-storno-ctyri" xml:space="preserve">
+    <value>30% zůstatkové ceny pobytu</value>
+  </data>
+  <data name="cenik-storno-jedna" xml:space="preserve">
+    <value>29-22 dní před příjezdem</value>
+  </data>
+  <data name="cenik-storno-pet" xml:space="preserve">
+    <value>14-08 dní před příjezdem</value>
+  </data>
+  <data name="cenik-storno-sedm" xml:space="preserve">
+    <value>100% zálohové platby</value>
+  </data>
+  <data name="cenik-storno-sest" xml:space="preserve">
+    <value>50% zůstatkové ceny pobytu</value>
+  </data>
+  <data name="cenik-strono-dva" xml:space="preserve">
+    <value>10% zůstatkové ceny pobytu</value>
+  </data>
+  <data name="cenik-strono-tri" xml:space="preserve">
+    <value>21-15 dní před příjezdem</value>
+  </data>
+  <data name="cenik-uklid" xml:space="preserve">
+    <value>Závěrečný úklid 750,- Kč</value>
+  </data>
+  <data name="cenik-Uvod" xml:space="preserve">
+    <value>CENY ZA PRONÁJEM CHALUPY / NOC</value>
+  </data>
+  <data name="cenik-Velikonoce" xml:space="preserve">
+    <value>Velikonoce</value>
+  </data>
+  <data name="cenik-vikend" xml:space="preserve">
+    <value>Víkend</value>
+  </data>
+  <data name="cenik-zapoujceni" xml:space="preserve">
+    <value>Zapůjčení povlečení 75,- Kč / sada</value>
+  </data>
+  <data name="cenik-Zima" xml:space="preserve">
+    <value>Zimní sezóna</value>
+  </data>
+  <data name="cernik-po-pa" xml:space="preserve">
+    <value>pondělí - pátek</value>
+  </data>
+  <data name="footer-Address" xml:space="preserve">
+    <value>Háj 17, 356 01 Jindřichovice</value>
+  </data>
+  <data name="footer-Chalupa" xml:space="preserve">
+    <value>Chalupa Háj</value>
+  </data>
+  <data name="footer-Country" xml:space="preserve">
+    <value>Česká republika</value>
+  </data>
+  <data name="footer-Socials" xml:space="preserve">
+    <value>Sociální sítě</value>
+  </data>
+  <data name="form-email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="form-jmeno" xml:space="preserve">
+    <value>Jméno</value>
+  </data>
+  <data name="form-Odeslat" xml:space="preserve">
+    <value>Odeslat</value>
+  </data>
+  <data name="form-Odjezd" xml:space="preserve">
+    <value>Datum odjezdu</value>
+  </data>
+  <data name="form-Pocet" xml:space="preserve">
+    <value>Počet osob</value>
+  </data>
+  <data name="form-Prijezd" xml:space="preserve">
+    <value>Datum příjezdu</value>
+  </data>
+  <data name="form-prijmeni" xml:space="preserve">
+    <value>Příjmení</value>
+  </data>
+  <data name="form-Telefon" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="form-Zprava" xml:space="preserve">
+    <value>Zpráva</value>
+  </data>
+  <data name="form-zprava-odeslana" xml:space="preserve">
+    <value>Zpráva byla úspěšně odeslána!</value>
+  </data>
+  <data name="galerie-Exterier" xml:space="preserve">
+    <value>Exteriér</value>
+  </data>
+  <data name="galerie-Interier" xml:space="preserve">
+    <value>Interiér</value>
+  </data>
+  <data name="index-Novinky" xml:space="preserve">
+    <value>Novinky</value>
+  </data>
+  <data name="index-Novinky-cena" xml:space="preserve">
+    <value>noc</value>
+  </data>
+  <data name="index-Odeslat" xml:space="preserve">
+    <value>Odeslat</value>
+  </data>
+  <data name="index-Uvitani" xml:space="preserve">
+    <value>Přijměte prosím naše pozvání do příjemných a útulných prostor naší chalupy. Ať k nám zavítáte na jednu či více nocí, věříme, že se u nás budete cítit jako doma. Nabízíme Vám pohodlně vybavené pokoje, společenskou místnost s kulečníkem, krbem, barem a výčepním zařízením a s dětským koutkem.</value>
+  </data>
+  <data name="nav-Cenik" xml:space="preserve">
+    <value>Ceník</value>
+  </data>
+  <data name="nav-Chalupa" xml:space="preserve">
+    <value>Chalupa</value>
+  </data>
+  <data name="nav-ChalupaHaj" xml:space="preserve">
+    <value>Chalupa Háj</value>
+  </data>
+  <data name="nav-Galerie" xml:space="preserve">
+    <value>Galerie</value>
+    <comment>q</comment>
+  </data>
+  <data name="nav-Kontakt" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="nav-Rezervace" xml:space="preserve">
+    <value>Rezervace</value>
+  </data>
+  <data name="reservation-form-Odeslat" xml:space="preserve">
+    <value>Odeslat poptávku</value>
+  </data>
+</root>

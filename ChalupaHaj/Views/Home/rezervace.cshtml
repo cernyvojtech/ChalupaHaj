@@ -1,4 +1,8 @@
-﻿@section css {
+﻿@using ChalupaHaj.Models
+@inject LanguageService language
+
+
+@section css {
     <link href="@Url.Content("~/css/cz/rezervace.css")" rel="stylesheet" />
 }
 
@@ -10,7 +14,7 @@
 }
 
 <div class="greyBox">
-    <h2>REZERVACE</h2>
+    <h2>@language.GetKey("nav-Rezervace")</h2>
 </div>
 
 @await Component.InvokeAsync("Reservation")

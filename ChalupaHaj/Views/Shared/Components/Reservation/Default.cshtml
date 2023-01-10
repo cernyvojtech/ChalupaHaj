@@ -1,5 +1,6 @@
 ﻿@model ChalupaHaj.Models.ReservationForm
-
+@using ChalupaHaj.Models
+@inject LanguageService language
 
 <!--Reservation form-->
 <form asp-action="Rezervace" class="contact-form green">
@@ -10,7 +11,7 @@
 
     <!--name-->
     <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-jmeno")</label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
@@ -18,7 +19,7 @@
 
     <!--surname-->
     <div class="form-group">
-        <label asp-for="Surname" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-prijmeni")</label>
         <input asp-for="Surname" class="form-control" />
         <span asp-validation-for="Surname" class="text-danger"></span>
     </div>
@@ -26,7 +27,7 @@
 
     <!--email-->
     <div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
+        <label asp-for="Email" class="control-label">@language.GetKey("form-email")</label>
         <input asp-for="Email" class="form-control" />
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
@@ -34,7 +35,7 @@
 
     <!--phone-->
     <div class="form-group">
-        <label asp-for="Phone" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-Telefon")</label>
         <input asp-for="Phone" class="form-control" />
         <span asp-validation-for="Phone" class="text-danger"></span>
     </div>
@@ -42,7 +43,7 @@
 
     <!--date of arrival-->
     <div class="form-group">
-        <label asp-for="Arrival" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-Prijezd")</label>
         <input asp-for="Arrival" class="form-control" />
         <span asp-validation-for="Arrival" class="text-danger"></span>
     </div>
@@ -50,7 +51,7 @@
 
     <!--date of departure-->
     <div class="form-group">
-        <label asp-for="Departure" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-Odjezd")</label>
         <input asp-for="Departure" class="form-control" />
         <span asp-validation-for="Departure" class="text-danger"></span>
     </div>
@@ -58,7 +59,7 @@
 
     <!--number of persons-->
     <div class="form-group">
-        <label asp-for="NumberOfPersons" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-Pocet")</label>
         <input asp-for="NumberOfPersons" class="form-control" />
         <span asp-validation-for="NumberOfPersons" class="text-danger"></span>
     </div>
@@ -66,7 +67,7 @@
 
     <!--message-->
     <div class="form-group">
-        <label asp-for="Message" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-Zprava")</label>
         <input asp-for="Message" class="form-control" />
         <span asp-validation-for="Message" class="text-danger"></span>
     </div>
@@ -74,7 +75,7 @@
 
     <!--send button-->
     <div class="greyBox">
-        <input type="submit" value="Odeslat poptávku" class="btn btn-primary" />
+        <input type="submit" value=@language.GetKey("reservation-form-Odeslat") class="btn btn-primary" />
     </div>
 
 

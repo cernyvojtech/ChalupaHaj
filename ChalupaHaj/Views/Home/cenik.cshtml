@@ -1,0 +1,122 @@
+﻿@using ChalupaHaj.Models
+@inject LanguageService language
+
+
+@section css {
+    <link href="@Url.Content("~/css/cz/cenik.css")" rel="stylesheet"/>
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Chalupa Háj | Ceník";
+}
+
+<article class="cenik-container">
+
+    <div class="cenik1">
+        <div class="greyBox">
+            <h2>@language.GetKey("cenik-Uvod")</h2>
+        </div>
+
+        <div class="greenBox">
+
+            <div>
+                <p>@language.GetKey("cenik-Zima")<span>25.01.2020 - 17.03.2020, @language.GetKey("cenik-Velikonoce")</span><strong>3.750,- Kč</strong></p>
+            </div>
+            <hr>
+            <div>
+                <p>@language.GetKey("cenik-Leto")<span>26.06.2020 - 30.08.2020</span><strong>4.000,- Kč</strong></p>
+            </div>
+            <hr>
+            <div>
+                <p>@language.GetKey("cenik-Mimo")<span>@language.GetKey("cernik-po-pa")</span><strong>2.500,- Kč</strong></p>
+            </div>
+            <hr>
+            <div>
+                <p>@language.GetKey("cenik-vikend")<span>@language.GetKey("cenik-pa-ne-svatky")</span><strong>3.750,- Kč</strong></p>
+            </div>
+            <hr>
+            <div>
+                <p>@language.GetKey("cenik-silvestr")<span>@language.GetKey("cenik-silvestr-minimum")</span><strong>6.000,- Kč</strong></p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cenik2">
+        <div class="greyBox">
+            <h2>@language.GetKey("cenik-poplatky")</h2>
+        </div>
+
+        <div class="greenBox">
+            
+            <div>
+                <p>@language.GetKey("cenik-domaci")<span>@language.GetKey("cenik-domaci-cena")</span></p>
+            </div>
+
+            <hr>
+            
+            <div>
+                <p>@language.GetKey("cenik-pristylka")<span>@language.GetKey("cenik-pristylka-osoby")</span>@language.GetKey("cenik-pristylka-cena")</p>
+            </div>
+
+            <hr>
+
+            <div>
+                <p>@language.GetKey("cenik-zapoujceni")</p>
+            </div>
+
+            <hr>
+            
+            <div>
+                <p>@language.GetKey("cenik-spotreba")</p>
+            </div>
+
+            <hr>
+
+            <div>
+                <p>@language.GetKey("cenik-uklid")</p>
+            </div>
+
+            <hr>
+
+            <div>
+                <p>@language.GetKey("cenik-kauce")</p>
+            </div>
+
+            <hr>
+
+            <div>
+                <p>@language.GetKey("cenik-po-pobytu")</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cenik3">
+        <div class="greyBox">
+            <h2>@language.GetKey("cenik-storno")</h2>
+        </div>
+
+        <div class="greenBox">
+
+            <div>
+                <p>@language.GetKey("cenik-storno-jedna")<span>@language.GetKey("cenik-strono-dva")</span></p>
+            </div>
+            <hr>
+            <div>
+                <p>@language.GetKey("cenik-strono-tri")<span>@language.GetKey("cenik-storno-ctyri")</span></p>
+            </div>
+            <hr>
+            <div>
+                <p>@language.GetKey("cenik-storno-pet")<span>@language.GetKey("cenik-storno-sest")</span></p>
+            </div>
+            <hr>
+            <div>
+                <p>@language.GetKey("cenik-storno-sedm")</p>
+            </div>
+
+        </div>
+    </div>
+
+</article>

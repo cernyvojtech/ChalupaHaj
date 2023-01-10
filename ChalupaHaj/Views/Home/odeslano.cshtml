@@ -1,9 +1,12 @@
-﻿@section css {
+﻿@using ChalupaHaj.Models
+@inject LanguageService language
+
+@section css {
     <link href="@Url.Content("~/css/cz/odeslano.css")" rel="stylesheet" />
 }
 
 @{
-    ViewData["Title"] = "Zpráva byla úspěšně odeslána!";
+    ViewData["Title"] = @language.GetKey("form-zprava-odeslana");
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,10 +14,9 @@
 
 
     <div class="greyBox">
-        <a asp-controller="Home" asp-action="Index">Chalupa Háj</a>
+        <a asp-controller="Home" asp-action="Index">@language.GetKey("nav-ChalupaHaj")</a>
     </div>
-
-
+    
 
     <article class="greenBox">
         <p>

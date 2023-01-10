@@ -1,4 +1,6 @@
-﻿@model IEnumerable<ChalupaHaj.Models.News>
+﻿@using ChalupaHaj.Models
+@inject LanguageService language
+@model IEnumerable<ChalupaHaj.Models.News>
 
 
 <!--If there is any news article -> creates news content-->
@@ -11,7 +13,7 @@
 
         <!--News header-->
         <div class="greyBox">
-            <a>Novinky</a>
+            <a>@language.GetKey("index-Novinky")</a>
         </div>
 
 
@@ -35,7 +37,7 @@
                     </p>
 
                     <p>
-                        @Html.DisplayFor(modelItem => item.Price),- / noc
+                        @Html.DisplayFor(modelItem => item.Price),- / @language.GetKey("index-Novinky-cena")
                     </p>
 
                 </div>
