@@ -1,16 +1,20 @@
-﻿@section css {
+﻿@using ChalupaHaj.Models
+@inject LanguageService language
+
+
+@section css {
     <link href="@Url.Content("~/css/cz/rezervace.css")" rel="stylesheet" />
 }
 
-@{
+    @{
 
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Chalupa Háj | Rezervace";
+    ViewBag.Title = @language.GetKey("title-rezervace");
 
 }
 
 <div class="greyBox">
-    <h2>REZERVACE</h2>
+    <h2>@language.GetKey("nav-Rezervace")</h2>
 </div>
 
 @await Component.InvokeAsync("Reservation")

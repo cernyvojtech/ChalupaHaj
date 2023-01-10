@@ -3,19 +3,30 @@ using ChalupaHaj.Models;
 using ChalupaHaj.Data;
 using System.Net.Mail;
 using System.Text;
+using Microsoft.AspNetCore.Localization;
 
 namespace ChalupaHaj.Controllers
 {
     //Main controller - returns views with czech language
-    public class CsController : Controller
+    public class HomeController : Controller
     {
         //creates database context
         private readonly ApplicationDbContext _context;
 
-        public CsController(ApplicationDbContext context)
+        public HomeController(ApplicationDbContext context)
         {
             _context = context;
 
+        }
+
+        //changes language
+        public IActionResult ChangeLanguage(string culture)
+        {
+            Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions() { Expires = DateTimeOffset.UtcNow.AddYears(1) });
+
+            return Redirect(Request.Headers["Referer"].ToString());
         }
 
 

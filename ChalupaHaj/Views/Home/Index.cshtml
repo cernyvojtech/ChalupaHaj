@@ -1,13 +1,17 @@
-﻿@section css {
+﻿@using ChalupaHaj.Models
+@inject LanguageService language
+
+@section css {
     <link href="@Url.Content("~/css/cz/index.css")" rel="stylesheet">
 }
 
 @{
     
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Chalupa Háj | Úvod";
+    ViewBag.Title = @language.GetKey("title");
     
 }
+
 
 
 <!--Content-->
@@ -19,7 +23,7 @@
 
     <!--Button reservation-->
     <div class="greyBox">
-        <a asp-controller="cs" asp-action="rezervace">Rezervace</a>
+        <a asp-controller="Home" asp-action="rezervace">@language.GetKey("nav-Rezervace")</a>
     </div>
 
 
@@ -29,11 +33,7 @@
 
     <!--Main article-->
     <div class="greenBox">
-        <p>
-            Přijměte prosím naše pozvání do příjemných a útulných prostor naší chalupy. Ať k nám zavítáte na
-            jednu či více nocí, věříme, že se u nás budete cítit jako doma. Nabízíme Vám pohodlně vybavené
-            pokoje, společenskou místnost s kulečníkem, krbem, barem a výčepním zařízením a s dětským koutkem.
-        </p>
+        <p>@language.GetKey("index-Uvitani")</p>
     </div>
 
 
@@ -52,7 +52,7 @@
 
     <!--Galery header-->
     <div class="greyBox">
-        <a asp-controller="cs" asp-action="galerie">Galerie</a>
+        <a asp-controller="Home" asp-action="galerie">@language.GetKey("nav-Galerie")</a>
     </div>
 
 
@@ -79,7 +79,7 @@
 
     <!--Contact header-->
     <div class="greyBox">
-        <a asp-controller="Cs" asp-action="kontakt">Kontakt</a>
+        <a asp-controller="Home" asp-action="kontakt">@language.GetKey("nav-Kontakt")</a>
     </div>
 
 

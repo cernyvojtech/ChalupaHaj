@@ -1,5 +1,6 @@
 ﻿@model ChalupaHaj.Models.Form
-
+@using ChalupaHaj.Models
+@inject LanguageService language
 
 <!--Contact us form-->
 <form asp-action="Create" class="contact-form green">
@@ -11,7 +12,7 @@
 
     <!--Input field Name-->
     <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-jmeno")</label>
         <input asp-for="Name" class="form-control">
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
@@ -19,7 +20,7 @@
 
     <!--Input field Surname-->
     <div class="form-group">
-        <label asp-for="Surname" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-prijmeni")</label>
         <input asp-for="Surname" class="form-control">
         <span asp-validation-for="Surname" class="text-danger"></span>
     </div>
@@ -27,7 +28,7 @@
 
     <!--Input field email-->
     <div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-email")</label>
         <input asp-for="Email" class="form-control">
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
@@ -35,7 +36,7 @@
 
     <!--Input field phone-->
     <div class="form-group">
-        <label asp-for="Phone" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-Telefon")</label>
         <input asp-for="Phone" class="form-control">
         <span asp-validation-for="Phone" class="text-danger"></span>
     </div>
@@ -43,14 +44,14 @@
 
     <!--Input field message-->
     <div class="form-group">
-        <label asp-for="Message" class="control-label"></label>
+        <label class="control-label">@language.GetKey("form-Zprava")</label>
         <input asp-for="Message" class="form-control">
         <span asp-validation-for="Message" class="text-danger"></span>
     </div>
 
     <!--Send button-->
     <div class="greyBox">
-        <input type="submit" value="Odeslat" class="btn btn-primary">
+        <input type="submit" value=@language.GetKey("form-Odeslat") class="btn btn-primary">
     </div>
 
 </form>

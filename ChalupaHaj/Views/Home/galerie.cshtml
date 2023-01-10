@@ -1,15 +1,18 @@
-﻿@section css {
+﻿@using ChalupaHaj.Models
+@inject LanguageService language
+
+@section css {
     <link href="@Url.Content("~/css/cz/galerie.css")" rel="stylesheet" />
 }
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Chalupa Háj | Galerie";
+    ViewBag.Title = @language.GetKey("title-galerie");
 }
 
 
 <div class="greyBox">
-    <h2>EXTERIÉR</h2>
+    <h2>@language.GetKey("galerie-Exterier")</h2>
 </div>
 
 <section class="interier-container">
@@ -122,7 +125,7 @@
 <!-------------------------------------------------------------------------------------------------------------------->
 
 <div class="greyBox">
-    <h2>INTERIÉR</h2>
+    <h2>@language.GetKey("galerie-Interier")</h2>
 </div>
 
 <section class="interier-container">
